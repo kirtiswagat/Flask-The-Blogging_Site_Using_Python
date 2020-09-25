@@ -1,0 +1,69 @@
+{% extends "dashboard_layout.html" %}
+{% block body %}
+<!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-2 text-gray-800">Add New Blog</h1>
+          <hr>
+          <!--<p class="mb-4"> The list of Blogs as follows:</p>-->
+          <form name="sentMessage" id="contactForm" action = "/new_blog" method="post" novalidate>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Blog Title</label>
+              <input type="text" class="form-control" placeholder="Blog Title" id="title" 
+              name="title" required data-validation-required-message="Please enter your blog title.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Slug</label>
+              <input type="text" class="form-control" placeholder="Slug" id="slug" name="slug" 
+              required data-validation-required-message="Please enter your slug name." >
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Content</label>
+              <textarea rows="5" class="form-control" placeholder="Content" id="content" name="content" 
+              required data-validation-required-message="Please enter content of your blog." ></textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Post By</label>
+              <input type="text" class="form-control" placeholder="Post By" id="post_by" name="post_by" required data-validation-required-message="Please enter name of the blog writer." >
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Blog Header Image</label>
+              <input type="text" class="form-control" placeholder="Header Image" id="img_file" name="img_file" 
+              ><p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+          
+
+          <br>
+          <div id="success"></div>
+              <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+        </form>
+
+          
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+{% endblock %}

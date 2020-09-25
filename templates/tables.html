@@ -1,0 +1,62 @@
+{% extends "dashboard_layout.html" %}
+{% block body %}
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-2 text-gray-800">Blog Details</h1>
+          <p class="mb-4"> The list of Blogs as follows:</p>
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Sl.No</th>
+                      <th>Title</th>
+                      <th>Date & Time</th>
+                      <th>Posted By</th>
+                      <th>Edit</th>
+                      <th>Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    {% for post in posts %}
+                    <tr>
+                      <td>{{post.posts_id_pk}}</td>
+                      <td>{{post.posts_title}}</td>
+                      <td>{{post.posts_date}}</td>
+                      <td>{{post.posts_by}}</td>
+                      <td>
+                        <a href="/edit/{{post.posts_id_pk}}" target="_blank">
+                            <button type="button" class="btn btn-success">Edit</button>
+                        </a>
+                      </td>
+                    
+                      <td>
+                        <a href="/delete/{{post.posts_id_pk}}" >
+                        <button type="button" class="btn btn-danger">Delete</button>
+                        </a>
+                      </td>
+
+                                           
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      
+{% endblock %}
