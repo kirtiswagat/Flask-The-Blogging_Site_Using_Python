@@ -176,7 +176,7 @@ def edit(posts_id_pk):
 
     post= Posts.query.filter_by(posts_id_pk= posts_id_pk).first()
 
-    return render_template('edit.html', params=params, posts= post)
+    return render_template('edit.html', params=params, posts= post, posts_id_pk= posts_id_pk)
 
 @app.route("/new_blog", methods=['GET', 'POST'])
 def new_blog():
