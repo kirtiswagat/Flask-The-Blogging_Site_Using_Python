@@ -32,3 +32,12 @@ A Blogging website designed with Booststrap, HTML, CSS in the Front-End and Pyth
 3. Admin Dashboard shall be accessed by UserName and Password.
 4. Inside Dashboard, there shall be separate listing for Adding new blog and displaying details of the blog.
 5. On the listing page, there shall be buttons for "Edit" and "Delet" functionalities for the Blogs.
+
+# 4. Environment Specifications
+*********************************
+1. flask==1.1.2
+2. flask_sqlalchemy==2.4.4
+3. flask_mail==0.9.1
+4. python==3.7.7
+5. Developed using PyCharm IDE
+6. Operating System used in the development== Windows 10
